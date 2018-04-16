@@ -1,0 +1,40 @@
+package testPackage;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+import helperPackage.BrowserFactory;
+import pagesPackage.LoginPage;
+
+public class TestClass {
+	
+	@Before
+	public void setUpTest()
+	{
+		//Initiate driver
+		WebDriver driver = BrowserFactory.startBrowser("chrome", "http://horse-dev.azurewebsites.net/");
+	}
+	
+	@Test
+	public void loginTest()
+	{
+		//Initiate driver
+		WebDriver driver = BrowserFactory.startBrowser("chrome", "http://horse-dev.azurewebsites.net/");
+		
+		//Initiate POM
+		LoginPage login_page = PageFactory.initElements(driver, LoginPage.class);
+		
+		//perform login steps
+		login_page.loginSteps();
+	}
+	
+	@After
+	public void tearDownTest()
+	{
+		
+	}
+
+}

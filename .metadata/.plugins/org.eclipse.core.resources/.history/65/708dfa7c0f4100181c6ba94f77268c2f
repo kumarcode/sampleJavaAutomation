@@ -1,0 +1,25 @@
+package testPackage;
+
+import org.junit.After;
+import org.junit.Before;
+
+import helperPackage.BrowserFactory;
+import utilityPackage.ConfigReader;
+
+public class BaseClass {
+	
+	@Before
+	public void setUpTest()
+	{
+		
+		//Initiate driver
+		BrowserFactory.startBrowser("chrome", ConfigReader.getURL());
+	}
+	
+	@After
+	public void tearDownTest()
+	{
+		BrowserFactory.driver.quit();
+	}
+
+}

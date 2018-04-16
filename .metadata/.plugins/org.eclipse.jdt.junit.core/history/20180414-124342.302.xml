@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="com.sampleCucumberMaven" tests="7" started="7" failures="0" errors="0" ignored="7">
+  <testsuite name="runner.TestRunner" time="0.001">
+    <testsuite name="Feature: TurnUpPortalLogin" time="0.001">
+      <testsuite name="Scenario: Check if the user logs into the application successfully" time="0.001" incomplete="true">
+        <skipped/>
+        <testcase name="Given I have launched the browser" classname="Scenario: Check if the user logs into the application successfully" time="0.001" ignored="true"/>
+        <testcase name="And I navigate to the url" classname="Scenario: Check if the user logs into the application successfully" time="0.0" ignored="true"/>
+        <testcase name="When I enter username" classname="Scenario: Check if the user logs into the application successfully" time="0.0" ignored="true"/>
+        <testcase name="And I enter password" classname="Scenario: Check if the user logs into the application successfully" time="0.0" ignored="true"/>
+        <testcase name="And I click on the Login button" classname="Scenario: Check if the user logs into the application successfully" time="0.0" ignored="true"/>
+        <testcase name="Then I should see the home page" classname="Scenario: Check if the user logs into the application successfully" time="0.0" ignored="true"/>
+        <testcase name="And I validate with any of the button name on the home page" classname="Scenario: Check if the user logs into the application successfully" time="0.0" ignored="true"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

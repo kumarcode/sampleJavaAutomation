@@ -1,0 +1,34 @@
+package utilityPackage;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ExcelDataConfig {
+	
+	public ExcelDataConfig()
+	{
+		try {
+			
+			File src = new File("C:\\Users\\Kumar\\workspace\\SampleProject\\com.sampleAutomationFramework\\TestData\\TestData.xlsx");
+			
+			FileInputStream fis = new FileInputStream(src);
+			
+			XSSFWorkbook wb = new XSSFWorkbook(fis);
+			
+			XSSFSheet sheet1 = wb.getSheetAt(0);
+			
+			String data0 = sheet1.getRow(1).getCell(1).getStringCellValue();
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	
+
+}

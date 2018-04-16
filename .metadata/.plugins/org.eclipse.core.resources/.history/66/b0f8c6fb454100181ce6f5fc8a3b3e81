@@ -1,0 +1,68 @@
+package utilityPackage;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ExcelDataConfig {
+	
+	public static XSSFWorkbook wb;
+	public static XSSFSheet sheet;
+	public static String cellValue;
+
+	
+	public ExcelDataConfig(String excelPath)
+	{
+		try {
+			
+			System.out.println("ExcelConstructorSuccess1");
+
+			//File src = new File(excelPath);
+			System.out.println("ExcelConstructorSuccess2");
+
+			FileInputStream fis = new FileInputStream(excelPath);
+			System.out.println("ExcelConstructorSuccess3");
+
+			wb = new XSSFWorkbook(fis);
+			
+			System.out.println("ExcelConstructorSuccess4");
+			
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("Excel Exception" +e.getMessage());
+		}
+	}
+	
+	public char getData(String sheetName, int rowNumber, int columnNumber)
+	{
+		System.out.println("getDataLine1");
+
+		sheet = wb.getSheet(sheetName);
+		
+		System.out.println("getDataLine2" +sheet.toString());
+		
+
+		try {
+			cellValue = sheet.getRow(rowNumber).getCell(columnNumber).getStringCellValue();
+		
+		
+
+				} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("Cell Value Exception" +e.getMessage());
+		}
+		
+		System.out.println("getDataLine3" +cellValue);
+
+		
+		return cellValue;
+
+	}
+	
+	
+
+}

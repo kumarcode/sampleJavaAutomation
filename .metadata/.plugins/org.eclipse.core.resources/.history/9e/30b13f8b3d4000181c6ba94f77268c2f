@@ -1,0 +1,13 @@
+package utilityPackage;
+
+public class ConfigReader {
+	
+	
+	public ConfigReader()
+	{
+		
+	}
+	
+	
+
+}
